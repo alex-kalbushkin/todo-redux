@@ -5,7 +5,7 @@ import Title from './components/title/Title';
 
 
 const App = () => (
-  <div>
+  <div className='main-wrapper'>
     <Title title='To-Do' />
     <ToDo />  
   </div>    

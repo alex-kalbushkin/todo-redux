@@ -7,8 +7,9 @@ import './todo-list.scss';
 const ToDoList = ({tasksList}) => (
   <ul className='todo-list'>
     {tasksList.map(({id, text, isCompleted}) => (
-      <ToDoItem key={id} text={text} isCompleted={isCompleted} />
+      <ToDoItem key={id} text={text} isCompleted={isCompleted} />     
     ))}
+    
   </ul>
 );
 

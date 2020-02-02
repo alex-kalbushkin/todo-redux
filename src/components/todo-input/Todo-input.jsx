@@ -6,13 +6,14 @@ import './todo-input.scss';
 
 const ToDoInput = ({onChange, value}) => (
   <div className='todo-input-wrapper'>
-    <FolderPlus />
+    <FolderPlus class='icon-folder'/>
     <input 
       className='todo-input'
       placeholder='Click to add a task'
       onChange={onChange}
       value={value}
     />
+    
   </div>
 );
 

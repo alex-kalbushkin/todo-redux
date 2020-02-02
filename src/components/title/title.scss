@@ -1,0 +1,15 @@
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+
+  .title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;  
+    margin: 0 auto;
+    padding: 0;
+    color: rgba(80, 122, 87, 0.9);
+    border-bottom: 1px solid rgba(184, 184, 184, 0.4);  
+    box-shadow: 0 1px 1px rgba(165, 165, 165, 0.7);   
+  }  
+}
+
