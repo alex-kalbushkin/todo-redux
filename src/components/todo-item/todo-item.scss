@@ -19,6 +19,11 @@
     color: red;
     margin-right: 10px;
     opacity: 0.4;
+    transition: opacity 200ms;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .completed {

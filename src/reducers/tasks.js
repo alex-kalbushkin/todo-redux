@@ -1,4 +1,4 @@
-import { ADD_TASK } from '../constants';
+import { ADD_TASK, REMOVE_TASK, COMPLETED_TASK } from '../constants';
 
 const TASKS = [
   {
@@ -29,6 +29,15 @@ const tasks = (state = TASKS, {id, text, isCompleted, type}) => {
           isCompleted,
         }
       ]
+    case REMOVE_TASK:
+      return [...state].filter(item => item.id !== id);
+    case COMPLETED_TASK:
+      return [...state].map(item => {
+        if (item.id === id) {
+          item.isCompleted = !item.isCompleted;
+        }
+        return item;
+      });
     default:
       return state;  
   }
