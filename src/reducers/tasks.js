@@ -1,24 +1,15 @@
 import { ADD_TASK, REMOVE_TASK, COMPLETED_TASK } from '../constants';
+import { load } from 'redux-localstorage-simple';
 
-const TASKS = [
-  {
-    id: 1,
-    text: 'Learn JS',
-    isCompleted: false,
-  }, 
-  {
-    id: 2,
-    text: 'Learn React',
-    isCompleted: true,
-  }, 
-  {
-    id: 3,
-    text: 'Learn Redux',
-    isCompleted: false,
+let TASKS = load({ namespace: 'To-Do' });
+
+if (!TASKS || !TASKS.tasks ||!TASKS.tasks.length) {
+  TASKS = {
+    tasks: [],
   }
-];
+}
 
-const tasks = (state = TASKS, {id, text, isCompleted, type}) => {
+const tasks = (state = TASKS.tasks, {id, text, isCompleted, type}) => {
   switch (type) {
     case ADD_TASK :
       return [
